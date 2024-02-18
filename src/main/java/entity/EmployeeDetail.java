@@ -3,8 +3,12 @@ package entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 public class EmployeeDetail {
 
     @Id
@@ -13,38 +17,6 @@ public class EmployeeDetail {
     private String adress;
     private String bankNaam;
     private String telefoonNummer;
-
-    public Long getId(){
-        return id;
-    }
-
-    public void setId(Long id){
-        this.id = id;
-    }
-
-    public String getAdress() {
-        return adress;
-    }
-
-    public void setAdress(String adress) {
-        this.adress = adress;
-    }
-
-    public String getBankNaam() {
-        return bankNaam;
-    }
-
-    public void setBankNaam(String bankNaam) {
-        this.bankNaam = bankNaam;
-    }
-
-    public String getTelefoonNummer() {
-        return telefoonNummer;
-    }
-
-    public void setTelefoonNummer(String telefoonNummer) {
-        this.telefoonNummer = telefoonNummer;
-    }
 
     @Override
     public String toString() {

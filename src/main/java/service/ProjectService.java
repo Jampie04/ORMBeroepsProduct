@@ -18,6 +18,8 @@ public class ProjectService {
         return repository.getProject();
     }
 
+    public Project findProjectById(Long id){return repository.findProjectById(id);}
+
     public Project createProject(Project project) {
         return repository.createProject(project);
     }

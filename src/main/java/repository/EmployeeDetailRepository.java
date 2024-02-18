@@ -19,6 +19,7 @@ public class EmployeeDetailRepository {
             entityManager.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
+            entityManager.getTransaction().rollback();
         }
 
         return employeeDetail;

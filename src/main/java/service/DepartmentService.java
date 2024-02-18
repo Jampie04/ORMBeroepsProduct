@@ -17,6 +17,13 @@ public class DepartmentService {
         return repository.getDepartment();
     }
 
+    public Department findDepartmentById(Long id) {
+        return repository.findDepartmentById(id);
+    }
+    public Department findDepartmentByName(String deptName) {
+        return repository.findDepartmentByName(deptName);
+    }
+
     public Department createDepartment(Department department) {
         return repository.createDepartment(department);
     }

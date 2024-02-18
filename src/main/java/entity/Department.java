@@ -1,10 +1,14 @@
 package entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
 public class Department {
 
     @Id
@@ -15,22 +19,6 @@ public class Department {
     @OneToMany (mappedBy = "department")
     private List<Employee> employee;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getDeptname() {
-        return deptname;
-    }
-
-    public void setDeptname(String deptname) {
-        this.deptname = deptname;
-    }
-
     @Override
     public String toString() {
         return "Department{" +
@@ -38,14 +26,6 @@ public class Department {
                 ", deptname='" + deptname + '\'' +
                 '}';
     }
-
-    /*public List<Employee> getEmployee() {
-        return employee;
-    }
-
-    public void setEmployee(List<Employee> employee) {
-        this.employee = employee;
-    }*/
 }
 
 

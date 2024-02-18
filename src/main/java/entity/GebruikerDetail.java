@@ -2,9 +2,14 @@ package entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 public class GebruikerDetail {
 
     @Id
@@ -13,28 +18,4 @@ public class GebruikerDetail {
     private String adress;
     private String bankNaam;
     private String geboorteDatum;
-
-    public String getAdress() {
-        return adress;
-    }
-
-    public void setAdress(String adress) {
-        this.adress = adress;
-    }
-
-    public String getBankNaam() {
-        return bankNaam;
-    }
-
-    public void setBankNaam(String bankNaam) {
-        this.bankNaam = bankNaam;
-    }
-
-    public String getGeboorteDatum() {
-        return geboorteDatum;
-    }
-
-    public void setGeboorteDatum(String geboorteDatum) {
-        this.geboorteDatum = geboorteDatum;
-    }
 }
